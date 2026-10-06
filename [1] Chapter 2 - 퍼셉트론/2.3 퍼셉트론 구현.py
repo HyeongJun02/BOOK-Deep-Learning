@@ -55,8 +55,14 @@ def OR(x1, x2):
     else:
         return 1
 
-print("x1 x2 | AND NAND OR")
+def XOR(x1, x2):
+    s1 = NAND(x1, x2)
+    s2 = OR(x1, x2)
+    y = AND(s1, s2)
+    return y
+
+print("x1 x2 | AND NAND OR XOR")
 for x1, x2 in [(0, 0), (1, 0), (0, 1), (1, 1)]:
-    print(f" {x1}  {x2} |  {AND(x1, x2)}    {NAND(x1, x2)}   {OR(x1, x2)}")
+    print(f" {x1}  {x2} |  {AND(x1, x2)}    {NAND(x1, x2)}   {OR(x1, x2)}   {XOR(x1, x2)}")
 
 # %%
