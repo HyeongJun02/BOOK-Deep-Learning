@@ -1,8 +1,12 @@
-# %% [3.1.1] example
-def AND(x1, x2):
-    w1, w2, theta = 0.5, 0.5, 0.7
-    tmp = x1 * w1 + x2 * w2
-    if tmp <= theta:
-        return 0
-    else:
+# %% [3.2.2] 계단 함수 구현
+import numpy as np
+
+def step_function1(x):
+    if x > 0:
         return 1
+    else:
+        return 0
+
+def step_function2(x):
+    y = x > 0
+    return y.astype(np.int)
