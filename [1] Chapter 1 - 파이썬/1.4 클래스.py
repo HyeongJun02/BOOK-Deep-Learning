@@ -1,3 +1,4 @@
+# %% [1.4.2] 클래스
 class Man:
     def __init__(self, name):
         self.name = name
@@ -12,3 +13,5 @@ class Man:
 m = Man("David")
 m.hello()
 m.goodbye()
+
+# %%
